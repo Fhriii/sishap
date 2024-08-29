@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-// Ganti dengan namespace yang sesuai dengan file .dbml Anda
+
 
 namespace cobachart
 {
-    /// <summary>
-    /// Interaction logic for login.xaml
-    /// </summary>
+    
     public partial class login : Window
     {
         public login()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)

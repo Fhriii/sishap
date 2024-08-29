@@ -6,7 +6,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:cobachart"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900">
+        Title="MainWindow" Height="1920" Width="1080">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
@@ -18,10 +18,10 @@
         </Grid.RowDefinitions>
   
         <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="#2C3E50">
-            <Button Content="Home" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Home_Click" />
-            <Button Content="Main" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" />
-            <Button Content="Settings" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" />
-            <Button Content="About" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="About_Click" />
+            <Button Content="Dashboard" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Home_Click" />
+            <Button Content="Booking Form" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Booking_Click" />
+            <Button Content="Room Management" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" />
+            <Button Content="Report" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="About_Click" />
         </StackPanel>
         <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
 

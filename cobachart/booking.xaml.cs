@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace cobachart
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for booking.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class booking : Page
     {
-        public MainWindow()
+        public booking()
         {
             InitializeComponent();
-            MainFrame.Navigate(new home());
-    
-            WindowState = WindowState.Maximized;
-        }
-
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new about2());
-        }private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new home());
         }
     }
 }
