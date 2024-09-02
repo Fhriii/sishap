@@ -59,3 +59,5 @@ C:\Users\MyPC PRO\source\repos\cobachart\cobachart\bin\Debug\System.Memory.xml
 C:\Users\MyPC PRO\source\repos\cobachart\cobachart\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\MyPC PRO\source\repos\cobachart\cobachart\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\MyPC PRO\source\repos\cobachart\cobachart\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\MyPC PRO\source\repos\cobachart\cobachart\obj\Debug\booking.g.cs
+C:\Users\MyPC PRO\source\repos\cobachart\cobachart\obj\Debug\booking.baml

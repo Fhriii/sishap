@@ -34,6 +34,9 @@ namespace cobachart
         }private void Home_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new home());
+        }private void Booking_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new booking());
         }
     }
 }
