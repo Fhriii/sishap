@@ -9,9 +9,9 @@
       Title="login">
 
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="413,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="userText"/>
-        <TextBox HorizontalAlignment="Left" Margin="413,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="passText"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="456,236,0,0" VerticalAlignment="Top" Click="Login_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="160,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="326" Name="userText" Height="30"/>
+        <TextBox HorizontalAlignment="Left" Margin="160,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="326" Name="passText" Height="29"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="276,280,0,0" VerticalAlignment="Top" Click="Login_Click" Height="33" Width="91"/>
 
     </Grid>
 </Window>

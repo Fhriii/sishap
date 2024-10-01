@@ -15,43 +15,25 @@ namespace cobachart
 
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private async void Login_Click(object sender, RoutedEventArgs e)
         {
-            try
+            var authserv = new authService();
+
+            // Dapatkan nilai kembalian berupa tuple (isLoggedIn, userId)
+            var (isLoggedIn, userId) = await authserv.LoginAsync(userText.Text, passText.Text);
+
+            if (isLoggedIn)
             {
-                // Buat instance konteks LINQ to SQL
-                using (var db = new DataClasses1DataContext()) // Ganti dengan nama konteks LINQ to SQL Anda
-                {
-                    // Ambil username dari textbox
-                    string userValue = userText.Text;
+                // Jika login berhasil, tampilkan ID user
+                MessageBox.Show($"Login berhasil! User ID: {userId}");
 
-                    // Cari pengguna dengan username tersebut
-                    var user = db.users.SingleOrDefault(u => u.username == userValue); // Ganti 'Users' dengan nama tabel di .dbml Anda
-
-                    if (user != null)
-                    {
-                        // Bandingkan password
-                        string passValue = passText.Text;
-                        if (user.password == passValue) // Ini hanya jika password disimpan sebagai teks biasa
-                        {
-                            this.Hide();
-                            var main = new MainWindow();
-                            main.ShowDialog();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Password Salah");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Username Salah");
-                    }
-                }
+                var mainwindow = new MainWindow();
+                mainwindow.ShowDialog();
+                this.Hide();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}");
+                MessageBox.Show("Ada yang salah");
             }
         }
     }
