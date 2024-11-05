@@ -28,8 +28,9 @@ namespace cobachart
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Akses MainWindow dan navigasi ke Page baru
-            var mainwindow = (MainWindow)Application.Current.MainWindow;
-            mainwindow.MainFrame.Navigate(new payment());
+            NavigationService?.Navigate(new payment());
+            //var mainwindow = (MainWindow)Application.Current.MainWindow;
+            //mainwindow.MainFrame.Navigate(new payment());
         }
     }
 }
