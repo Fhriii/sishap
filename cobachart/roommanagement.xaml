@@ -1,0 +1,61 @@
+﻿<Page x:Class="cobachart.roommanagement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cobachart"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1000"
+      Title="roommanagement">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="*">
+                
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollViewer Margin="20,0" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel Orientation="Horizontal">
+                <!-- Image 1 -->
+                <Image Source="downl.jpg" Width="150" Height="150" Margin="5"/>
+                <!-- Image 2 -->
+                <Image Source="downl.jpg" Width="150" Height="150" Margin="5"/>
+                <!-- Image 3 -->
+                <Image Source="downl.jpg" Width="150" Height="150" Margin="5"/><Image Source="downl.jpg" Width="150" Height="150" Margin="5"/>
+                <!-- Image 2 -->
+                <Image Source="downl.jpg" Width="150" Height="150" Margin="5"/>
+                <!-- Image 3 -->
+                <Image Source="downl.jpg" Width="150" Height="150" Margin="5"/>
+                <!-- Add more images as needed -->
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="2" Margin="20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Image Source="downl.jpg" Width="500" Height="260" HorizontalAlignment="Right"/>
+                <TextBlock Text="Deskripsi gambar 1" HorizontalAlignment="Center" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Image Source="downl.jpg" Width="500" Height="260" HorizontalAlignment="Right"/>
+                <TextBlock Text="Deskripsi gambar 1" HorizontalAlignment="Center" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0">
+                <Image Source="downl.jpg" Width="500" Height="260" HorizontalAlignment="Left"/>
+                <TextBlock Text="Deskripsi gambar 1" HorizontalAlignment="Center" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0">
+                <Image Source="downl.jpg" Width="500" Height="260" HorizontalAlignment="Left"/>
+                <TextBlock Text="Deskripsi gambar 1" HorizontalAlignment="Center" Margin="5"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

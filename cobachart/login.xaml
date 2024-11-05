@@ -5,13 +5,62 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cobachart"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"  Background="Transparent" 
       Title="login">
 
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="160,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="326" Name="userText" Height="30"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="326" Name="passText" Height="29"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="276,280,0,0" VerticalAlignment="Top" Click="Login_Click" Height="33" Width="91"/>
+    <Border CornerRadius="25" Padding="20" Background="White">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition/>
+                <RowDefinition Height="130"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 20">
+                <!-- Judul Aplikasi -->
+                <TextBlock Text="Co-Working Space" FontSize="35" Foreground="#888" FontWeight="Bold"/>
+                <TextBlock Text="Management" FontSize="35" Foreground="#888" FontWeight="Bold"/>
+                <TextBlock Text="Application" FontSize="35" Foreground="#888" FontWeight="Bold"/>
+
+                <!-- Deskripsi -->
+                <TextBlock Text="Aplikasi yang Selalu Membantumu" FontSize="20" Foreground="#AAA" Margin="0,10,0,0"/>
+            </StackPanel>
+            <Border BorderThickness="1" Grid.Row="1" Grid.Column="2" BorderBrush="#7034ec">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!-- Judul -->
+        <TextBlock Text="Sign in" FontSize="24" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Input Email -->
+        <StackPanel Margin="0,10,0,0">
+            <TextBlock Text="Username" FontSize="12" Foreground="Gray"/>
+            <TextBox  FontSize="14" Padding="10" Background="#f3f3f3" BorderThickness="0" Name="userText"/>
+        </StackPanel>
+
+        <!-- Input Password -->
+        <StackPanel Margin="0,10,0,0">
+            <TextBlock Text="Password" FontSize="12" Foreground="Gray"/>
+            <Grid>
+                <TextBox FontSize="14" Padding="10" Background="#f3f3f3" BorderThickness="0" Name="passText"/>
+            
+            </Grid>
+        </StackPanel>
+
+        <!-- Checkbox dan Link Lupa Password -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,0">
+            <CheckBox Content="Remember me" Foreground="Gray" VerticalAlignment="Center"/>
+            <TextBlock Text="Forgot password?" Foreground="#7034ec" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Tombol Sign In -->
+                    <Button Content="Sign in" Background="#7034ec" Foreground="White" FontSize="16" Padding="10" Margin="0,20,0,0" Width="100" HorizontalAlignment="Center" BorderBrush="Transparent" Click="Login_Click" />
+    </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
 </Window>

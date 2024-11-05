@@ -6,25 +6,66 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:cobachart"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            
-        </Grid.RowDefinitions>
-  
-        <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="#2C3E50">
-            <Button Content="Dashboard" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Home_Click" />
-            <Button Content="Booking Form" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Booking_Click" />
-            <Button Content="Room Management" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" />
-            <Button Content="Report" Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="About_Click" />
-        </StackPanel>
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        Title="MainWindow" Height="720" Width="1280">
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Border  Grid.Column="0" Grid.RowSpan="2" Background="#7034ec" Padding="25" CornerRadius="25">
+                <DockPanel LastChildFill="True">
+                    <!-- Tombol-tombol lainnya dengan ikon -->
+                    <StackPanel DockPanel.Dock="Top">
+                        <Button Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Home_Click" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <!-- Contoh ikon untuk Dashboard (gunakan FontIcon atau Path sesuai kebutuhan) -->
+                                <TextBlock Text="🏠" FontSize="16" Margin="0,0,10,0" />
+                                <TextBlock Text="Dashboard" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Booking_Click" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="📅" FontSize="16" Margin="0,0,10,0" />
+                                <TextBlock Text="Booking Form" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="Room_Click" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="🏨" FontSize="16" Margin="0,0,10,0" />
+                                <TextBlock Text="Room Management" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="About_Click" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="📊" FontSize="16" Margin="0,0,10,0" />
+                                <TextBlock Text="Report" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <!-- Tombol "Fahri" dengan bundaran profil -->
+                    <Button Height="50" Foreground="White" Background="Transparent" BorderBrush="Transparent" Click="About_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+                        <StackPanel Orientation="Horizontal">
+                            <!-- Bundaran untuk profil -->
+                            <Ellipse Width="30" Height="30" Fill="White" Stroke="Transparent" Margin="0,0,10,0"/>
+                            <TextBlock Text="Fahri" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+            </Border>
+
+            <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
 
 
-    </Grid>
+        </Grid>
+    </Border>
+    
 </Window>
