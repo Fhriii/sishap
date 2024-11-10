@@ -25,7 +25,7 @@ namespace cobachart
             InitializeComponent();
             MainFrame.Navigate(new home());
     
-            WindowState = WindowState.Maximized;
+            
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
@@ -37,6 +37,11 @@ namespace cobachart
         }private void Booking_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new booking());
+        }
+
+        private void Room_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new roommanagement());
         }
     }
 }

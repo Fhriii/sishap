@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace cobachart
 {
     /// <summary>
-    /// Interaction logic for booking.xaml
+    /// Interaction logic for roommanagement.xaml
     /// </summary>
-    public partial class booking : Page
+    public partial class roommanagement : Page
     {
-        public booking()
+        public roommanagement()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            // Akses MainWindow dan navigasi ke Page baru
-            NavigationService?.Navigate(new payment());
-            //var mainwindow = (MainWindow)Application.Current.MainWindow;
-            //mainwindow.MainFrame.Navigate(new payment());
         }
     }
 }

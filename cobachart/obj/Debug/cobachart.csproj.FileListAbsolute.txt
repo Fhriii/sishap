@@ -110,6 +110,8 @@ C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\booking.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\home.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\login.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\MainWindow.g.cs
+C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\payment.g.cs
+C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\roommanagement.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\App.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\cobachart_Content.g.cs
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\cobachart_MarkupCompile.cache
@@ -119,6 +121,8 @@ C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\booking.baml
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\home.baml
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\login.baml
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\MainWindow.baml
+C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\payment.baml
+C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\roommanagement.baml
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\cobachart.g.resources
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\cobachart.Properties.Resources.resources
 C:\Users\MyPC PRO\Source\Repos\Fhriii\sishap\cobachart\obj\Debug\cobachart.csproj.GenerateResource.cache

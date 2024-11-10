@@ -11,7 +11,7 @@ namespace cobachart
         public login()
         {
             InitializeComponent();
-            WindowState = WindowState.Maximized;
+            
 
         }
 
@@ -28,7 +28,7 @@ namespace cobachart
                 MessageBox.Show($"Login berhasil! User ID: {userId}");
 
                 var mainwindow = new MainWindow();
-                mainwindow.ShowDialog();
+                mainwindow.Show();
                 this.Hide();
             }
             else
