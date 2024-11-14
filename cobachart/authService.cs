@@ -22,7 +22,7 @@ namespace cobachart
             };
             var json = JsonConvert.SerializeObject(logininfo);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await client.PostAsync("http://localhost:3000/auth/login", content);
+            var response = await client.PostAsync("http://localhost:3000/api/login", content);
 
             if (response.IsSuccessStatusCode)
             {
