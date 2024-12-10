@@ -5,14 +5,132 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cobachart"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1000"
       Title="payment">
 
     <Grid Background="White">
-        <TextBox HorizontalAlignment="Left" Margin="67,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="67,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="67,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="173,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.746,6.203"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- Left Panel -->
+        <StackPanel Grid.Column="0" Margin="20">
+            <TextBlock Text="Confirm and Pay" 
+                       FontSize="24" 
+                       FontWeight="SemiBold" 
+                       Margin="0,0,0,20"/>
+
+            <!-- Booking details -->
+            <TextBlock Text="Booking details" 
+                       FontWeight="SemiBold" 
+                       Margin="0,0,0,10"/>
+
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Date" Margin="0,0,0,5"/>
+                    <DatePicker x:Name="BookingDate" Width="200" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Guests" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="GuestsCount" Width="200" HorizontalAlignment="Left">
+                        <ComboBoxItem>1 guest</ComboBoxItem>
+                        <ComboBoxItem>2 guests</ComboBoxItem>
+                        <ComboBoxItem>3 guests</ComboBoxItem>
+                        <ComboBoxItem>4 guests</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+
+            <!-- Contact information -->
+            <StackPanel>
+                <TextBlock Text="Full Name" Margin="0,0,0,5"/>
+                <TextBox x:Name="FullName" Height="30" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Email" Margin="0,0,0,5"/>
+                <TextBox x:Name="Email" Height="30" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Phone Number" Margin="0,0,0,5"/>
+                <TextBox x:Name="Phone" Height="30" Margin="0,0,0,20"/>
+            </StackPanel>
+
+            <!-- Payment section -->
+            <TextBlock Text="Pay with" 
+                       FontWeight="SemiBold" 
+                       Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <RadioButton Content="PayPal" Margin="0,0,20,0" IsChecked="True"/>
+                <RadioButton Content="Card" Margin="0,0,20,0"/>
+                <RadioButton Content="Other"/>
+            </StackPanel>
+
+            <!-- Card details -->
+            <TextBlock Text="Card number" Margin="0,0,0,5"/>
+            <TextBox x:Name="CardNumber" Height="30" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Card holder" Margin="0,0,0,5"/>
+            <TextBox x:Name="CardHolder" Height="30" Margin="0,0,0,10"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                    <TextBlock Text="Expiration date" Margin="0,0,0,5"/>
+                    <TextBox x:Name="ExpirationDate" Height="30"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="CVV" Margin="0,0,0,5"/>
+                    <TextBox x:Name="CVV" Height="30"/>
+                </StackPanel>
+            </Grid>
+
+            <Button Content="Confirm payment" 
+                    Background="#6B4EFF"
+                    Foreground="White"
+                    Height="40"
+                    Margin="0,20,0,0"
+                    />
+        </StackPanel>
+
+        <!-- Right Panel -->
+        <StackPanel Grid.Column="1" Background="#F8F8F8" Margin="0">
+            <Image Source="/Images/room.jpg" Height="200" Stretch="UniformToFill"/>
+
+            <StackPanel Margin="20">
+                <TextBlock Text="Price details" 
+                           FontWeight="SemiBold" 
+                           Margin="0,0,0,10"/>
+
+                <Grid Margin="0,0,0,5">
+                    <TextBlock Text="Base price" HorizontalAlignment="Left"/>
+                    <TextBlock Text="$50" HorizontalAlignment="Right"/>
+                </Grid>
+
+                <Grid Margin="0,0,0,5">
+                    <TextBlock Text="Service fee" HorizontalAlignment="Left"/>
+                    <TextBlock Text="$5" HorizontalAlignment="Right"/>
+                </Grid>
+
+                <Grid Margin="0,0,0,5">
+                    <TextBlock Text="Total (USD)" 
+                               FontWeight="SemiBold" 
+                               HorizontalAlignment="Left"/>
+                    <TextBlock Text="$55" 
+                               FontWeight="SemiBold" 
+                               HorizontalAlignment="Right"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

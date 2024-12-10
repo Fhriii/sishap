@@ -10,93 +10,184 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
 
-        <!-- Sidebar -->
-        <StackPanel Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Background="White" Margin="10">
-            <TextBlock Text="Spaces" FontWeight="Bold" Margin="0,0,0,10"/>
-            <CheckBox Content="Private office" Margin="0,0,0,5"/>
-            <CheckBox Content="Desk" Margin="0,0,0,5"/>
-            <CheckBox Content="Meeting room" Margin="0,0,0,5"/>
-            <CheckBox Content="Smoking room" Margin="0,0,0,20"/>
+        <!-- Left Sidebar -->
+        <StackPanel Grid.Column="0" Margin="20,20,0,20">
+            <!-- Date Picker -->
+            <TextBlock Text="Date" 
+                       Margin="0,0,0,5"
+                       FontWeight="SemiBold"/>
+            <DatePicker Margin="0,0,0,20"/>
 
-            <TextBlock Text="Price" FontWeight="Bold" Margin="0,0,0,10"/>
-            <RadioButton Content="Below $50" Margin="0,0,0,5"/>
-            <RadioButton Content="$50 to $99" Margin="0,0,0,5"/>
-            <RadioButton Content="$100 to $200" Margin="0,0,0,5"/>
-            <RadioButton Content="Above $200" Margin="0,0,0,20"/>
+            <!-- Spaces Section -->
+            <TextBlock Text="Spaces" 
+                       Margin="0,0,0,10"
+                       FontWeight="SemiBold"/>
 
-            <TextBlock Text="Equipments" FontWeight="Bold" Margin="0,0,0,10"/>
-            <!-- Add more filters here -->
+            <!-- Space Options -->
+            <ListBox Background="Transparent" 
+                     BorderThickness="0">
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Private office"/>
+                </ListBoxItem>
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Meeting room"/>
+                </ListBoxItem>
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Working space"/>
+                </ListBoxItem>
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Room 201"/>
+                </ListBoxItem>
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Room B01 to B09"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="Floor B10 to B20"/>
+                </ListBoxItem>
+            </ListBox>
+
+            <!-- Equipments Section -->
+            <TextBlock Text="Equipments" 
+                       Margin="0,20,0,10"
+                       FontWeight="SemiBold"/>
+
+            <ListBox Background="Transparent" 
+                     BorderThickness="0">
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Projector"/>
+                </ListBoxItem>
+                <ListBoxItem Margin="0,0,0,5">
+                    <CheckBox Content="Whiteboard"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="Video Conference"/>
+                </ListBoxItem>
+            </ListBox>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
-            <TextBlock Text="20+ available spaces" FontWeight="Bold" FontSize="16" Margin="0,0,0,20"/>
 
-            <!-- Item 1 -->
-            <Border BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="5" Margin="0,0,0,20">
-                <Button HorizontalAlignment="Left"  VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
-                    <Grid Width="1260">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="350"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="downl.jpg" Grid.Column="0" Stretch="UniformToFill"/>
-                        <StackPanel Grid.Column="1" Margin="10">
-                            <TextBlock Text="Semi Private Co-Working Space" FontWeight="Bold" FontSize="14"/>
-                            <TextBlock Text="6 guests · Meeting room · Wifi · Air conditioning" FontSize="12" Margin="0,5,0,0"/>
-                            <TextBlock Text="$6/hour" FontWeight="Bold" FontSize="14" Foreground="Green" Margin="0,10,0,0"/>
+        <!-- Right Content -->
+        <ScrollViewer Grid.Column="1" 
+                      Margin="20"
+                      VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Header -->
+                <Grid Margin="0,0,0,20">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Jul 17, 21" 
+                                   FontWeight="SemiBold"
+                                   VerticalAlignment="Center"/>
+                        <Button Content="Export"
+                                Margin="20,0,0,0"
+                                Padding="15,5"
+                                Background="#5B21B6"
+                                Foreground="White"
+                                BorderThickness="0"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Workspace Items -->
+                <!-- Private Co-Working Space -->
+                <StackPanel Margin="0,0,0,30">
+                    <TextBlock Text="Semi Private Co-Working Space"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,10"/>
+
+                    <Border BorderThickness="1"
+                            BorderBrush="#EEEEEE"
+                            CornerRadius="8"
+                            Margin="0,0,0,20">
+                        <Grid>
+                            <Button
+                                Click="Button_Click_1"
+                                >
+                                <Image Source="downl.jpg"
+                                       Height="200"
+                                       Stretch="UniformToFill"/>
+                            </Button>
+                            
+                        </Grid>
+                    </Border>
+
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Capacity: 4 persons • Size: 15m² • Floor: 1st floor • WiFi • Air conditioning"
+                                       Foreground="#666666"/>
+                            <TextBlock Text="$5/Hour"
+                                       FontWeight="SemiBold"
+                                       Margin="0,5,0,0"/>
                         </StackPanel>
                     </Grid>
-                </Button>
+                </StackPanel>
 
-            </Border>
+                <!-- Meeting Room -->
+                <StackPanel Margin="0,0,0,30">
+                    <TextBlock Text="Meeting room"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,10"/>
 
-            <!-- Item 2 -->
-            <Border BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="5" Margin="0,0,0,20">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="350"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Source="downl.jpg" Grid.Column="0" Stretch="UniformToFill"/>
-                    <StackPanel Grid.Column="1" Margin="10">
-                        <TextBlock Text="Meeting room" FontWeight="Bold" FontSize="14"/>
-                        <TextBlock Text="8 guests · Smartboard · Speakers · Wifi · Air conditioning" FontSize="12" Margin="0,5,0,0"/>
-                        <TextBlock Text="$13/hour" FontWeight="Bold" FontSize="14" Foreground="Green" Margin="0,10,0,0"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
+                    <Border BorderThickness="1"
+                            BorderBrush="#EEEEEE"
+                            CornerRadius="8"
+                            Margin="0,0,0,20">
+                        <Grid>
+                            <Image Source="downl.jpg"
+                                   Height="200"
+                                   Stretch="UniformToFill"/>
+                        </Grid>
+                    </Border>
 
-            <!-- Item 3 -->
-            <Border BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="5" Margin="0,0,0,20">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="350"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Source="downl.jpg" Grid.Column="0" Stretch="UniformToFill"/>
-                    <StackPanel Grid.Column="1" Margin="10">
-                        <TextBlock Text="Desk" FontWeight="Bold" FontSize="14"/>
-                        <TextBlock Text="1 guest · Wifi · Natural light" FontSize="12" Margin="0,5,0,0"/>
-                        <TextBlock Text="$1/hour" FontWeight="Bold" FontSize="14" Foreground="Green" Margin="0,10,0,0"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-        <Button Grid.Column="1" Grid.Row="1" Width="200" Height="30" Background="AliceBlue" Foreground="Black" Margin="10,0" 
-                        HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0"  
-                        Cursor="Hand" Padding="5" Content="Space | 1 Juli | 2 guest">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Capacity: 8 persons • Size: 25m² • Floor: 2nd floor • WiFi • Air conditioning"
+                                       Foreground="#666666"/>
+                            <TextBlock Text="$15/Hour"
+                                       FontWeight="SemiBold"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
 
-        </Button>
+                <!-- Desk -->
+                <StackPanel>
+                    <TextBlock Text="Desk"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,10"/>
+
+                    <Border BorderThickness="1"
+                            BorderBrush="#EEEEEE"
+                            CornerRadius="8"
+                            Margin="0,0,0,20">
+                        <Grid>
+                            <Image Source="downl.jpg"
+                                   Height="200"
+                                   Stretch="UniformToFill"/>
+                        </Grid>
+                    </Border>
+
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Capacity: 1 person • Size: 5m² • Floor: 1st floor • WiFi • Air conditioning"
+                                       Foreground="#666666"/>
+                            <TextBlock Text="$10/Hour"
+                                       FontWeight="SemiBold"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <!-- Navigation Dots -->
+                <StackPanel Orientation="Horizontal"
+                           HorizontalAlignment="Center"
+                           Margin="0,30,0,0">
+                    <Ellipse Width="8" Height="8" Fill="Black" Margin="5"/>
+                    <Ellipse Width="8" Height="8" Fill="#DDDDDD" Margin="5"/>
+                    <Ellipse Width="8" Height="8" Fill="#DDDDDD" Margin="5"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
